@@ -10,6 +10,7 @@ import java.util.Objects;
 public class UserPresentationData {
     
     private int id;
+
     private String name;
 
     private String picture;//include only URL
