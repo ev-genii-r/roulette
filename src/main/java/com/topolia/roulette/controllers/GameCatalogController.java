@@ -24,6 +24,7 @@ public class GameCatalogController {
         user = getter.testPossibility(2);
         model.addAttribute("name", user.getName());
         model.addAttribute("id", user.getId());
+        model.addAttribute("balance", 100);
         return "game-catalog";
     }
     @PostMapping("/game-catalog")
