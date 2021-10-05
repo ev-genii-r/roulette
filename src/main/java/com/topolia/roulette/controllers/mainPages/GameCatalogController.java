@@ -1,4 +1,4 @@
-package com.topolia.roulette.controllers;
+package com.topolia.roulette.controllers.mainPages;
 
 import com.topolia.roulette.beans.UserPresentationData;
 import com.topolia.roulette.service.UserPresentationDataGetter;

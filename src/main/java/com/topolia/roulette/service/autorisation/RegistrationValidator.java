@@ -1,12 +1,13 @@
-package com.topolia.roulette.service;
+package com.topolia.roulette.service.autorisation;
 
+import com.topolia.roulette.controllers.autorisation.RegistrationController;
 import com.topolia.roulette.exception.RegistrationException;
 
 /**
  * check registration form
  *
  * @throws RegistrationException for controller
- * @see com.topolia.roulette.controllers.RegistrationController
+ * @see RegistrationController
  *
  * @author Evgenii Rudkovskii
  * @version 1.0

@@ -1,4 +1,4 @@
-package com.topolia.roulette.controllers;
+package com.topolia.roulette.controllers.mainPages;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

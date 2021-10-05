@@ -1,12 +1,13 @@
-package com.topolia.roulette.service;
+package com.topolia.roulette.service.autorisation;
 
+import com.topolia.roulette.controllers.autorisation.SignInController;
 import com.topolia.roulette.exception.SignInException;
 
 /**
  * compare users data with database
  *
  * @throws SignInException exception for controller
- * @see com.topolia.roulette.controllers.SignInController
+ * @see SignInController
  *
  * @author Evgenii Rudkovskii
  * @version 1.0

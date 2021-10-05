@@ -1,7 +1,7 @@
-package com.topolia.roulette.controllers;
+package com.topolia.roulette.controllers.autorisation;
 
 import com.topolia.roulette.exception.SignInException;
-import com.topolia.roulette.service.SignInCheck;
+import com.topolia.roulette.service.autorisation.SignInCheck;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;

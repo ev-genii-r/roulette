@@ -1,7 +1,7 @@
-package com.topolia.roulette.controllers;
+package com.topolia.roulette.controllers.autorisation;
 
 import com.topolia.roulette.exception.RegistrationException;
-import com.topolia.roulette.service.RegistrationValidator;
+import com.topolia.roulette.service.autorisation.RegistrationValidator;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
