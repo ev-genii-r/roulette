@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Donat</title>
+	<link rel="stylesheet" th:href="@{/css/donat.css}">
+</head>
+<body>
+	<header>
+		<div class="container">
+			<img src="img/logo.png" alt="" class="logo">
+			<nav>
+				<ul class="menu">
+					<li>
+						<a class="button" href="/user-page"><img src="img/domik.png" alt=""></a>
+					</li>
+					<li>
+						<a class="button" href="/game-catalog"><img src="img/minigames.png" alt=""></a>
+					</li>
+					<li>
+						<a class="button" href="/wallet"><img src="img/payment.png" alt=""></a>
+					</li>
+					<li>
+						<a class="button" href="/contacts"><img src="img/contacts.png" alt=""></a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<section>
+		<img src="img/holst.png" alt="" class="holst">
+	</section>
+	<section>
+		<div class="main">
+			<div class="back instruct">
+				<div class="win">
+					<div class="winItem1"><p>Лучший игрок: Дядя Вася<br>Выигрыш составил: 184620$</p></div>
+					<div class="winItem2"><img src="img/kubok.png" alt=""></div>
+					<div class="winItem3"><p>Лучший выигрыш:<br>1 000 000$</p></div>
+				</div>
+				<img src="img/registration.png" alt="">
+				<div class="donat">
+					<form action="/donat" method="post">
+						<p>
+							Сумма для списания:
+						</p>
+						<input type="text" class="userDonat donatInfo" name = "donat"><br>
+						<button class="accept" type="submit">Подтвердить</button>
+					</form>
+			</div>
+		</div>
+			<div class="info instruct">
+				<img src="img/u.png" alt="" class="u">
+				<img src="img/ava.png" alt="" class="ava">
+				<div class="userInfo">		
+					<p>
+						Логин:<br>Счет:<br>Статус:
+					</p>
+				</div>
+			</div>
+			<div class="girl instruct">
+				<img src="img/girl.png" alt="" class="girlImg">
+			</div>
+		</div>
+	</section>
+</body>
+</html>

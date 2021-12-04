@@ -7,8 +7,11 @@ import org.junit.jupiter.api.Test;
 public class ApplicationTest {
     @Test
     public void anyTest(){
-        DatabaseConnector databaseConnector = new DatabaseConnector();
-        UserDatabaseData user = new UserDatabaseData(5, "Bobby", "topo", null);
+         DatabaseConnector databaseConnector = new DatabaseConnector();
+        System.out.println(databaseConnector.getUser(5));
+        System.out.println(databaseConnector.isUserDoesNotExists("jor"));
+        System.out.println(databaseConnector.isUserExists("jora", "popa"));
+        UserDatabaseData user = new UserDatabaseData( "pooooooo", "popopo", null);
         databaseConnector.addUser(user);
     }
 }

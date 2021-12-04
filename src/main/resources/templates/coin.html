@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>FartunaWheel</title>
+	<link rel="stylesheet" th:href="@{/css/coin.css}">
+</head>
+<body>
+	<header>
+		<div class="container">
+			<img src="img/logo.png" alt="" class="logo">
+			<nav>
+				<ul class="menu">
+					<li>
+						<a class="button" href="/user-page"><img src="img/domik.png" alt=""></a>
+					</li>
+					<li>
+						<a class="button" href="/game-catalog"><img src="img/minigames.png" alt=""></a>
+					</li>
+					<li>
+						<a class="button" href="/wallet"><img src="img/payment.png" alt=""></a>
+					</li>
+					<li>
+						<a class="button" href="/contacts"><img src="img/contacts.png" alt=""></a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<section>
+		<img src="img/holst.png" alt="" class="holst">
+	</section>
+	<section>
+		<div class="main">
+			<div class="back instruct">
+				<div class="win">
+					<div class="winItem1"><p>Лучший игрок: Дядя Вася<br>Выигрыш составил: 184620$</p></div>
+					<div class="winItem2"><img src="img/kubok.png" alt=""></div>
+					<div class="winItem3"><p>Лучший выигрыш:<br>1 000 000$</p></div>
+				</div>
+				<img src="img/coin2.png" alt="">
+				<div class="game">
+					<form action="/coin" method="post">
+					    <input name = "bet" placeholder="ставка">
+					    <select name = "selection">
+					        <option value="0">Орёл</option>
+					        <option value="1">Решка</option>
+					    </select>
+					    <button type="submit">Бросить монетку</button>
+					</form>
+				    <img th:src="${result}" width="400" height="400"/>
+				    <p th:text="${coin}"></p>
+				    <p th:text="${win}"></p>
+			    </div>
+		</div>
+			<div class="info instruct">
+				<img src="img/u.png" alt="" class="u">
+				<img th:src="${image}" alt="" class="ava">
+				<div class="userInfo">
+
+					<p th:text = "'Логин: ' + ${name}"/>
+					<p th:text = "'Счёт: ' + ${balance} + '$'"/>
+
+				</div>
+			</div>
+			<div class="girl instruct">
+				<img src="img/girl.png" alt="" class="girlImg">
+			</div>
+		</div>
+	</section>
+</body>
+</html>

@@ -1,6 +1,7 @@
 package com.topolia.roulette.service.autorisation;
 
 import com.topolia.roulette.controllers.autorisation.RegistrationController;
+import com.topolia.roulette.dao.DatabaseConnector;
 import com.topolia.roulette.exception.RegistrationException;
 
 /**
@@ -30,7 +31,10 @@ public class RegistrationValidator {
         if(login.length() < 4 || password.length() < 4){
             throw new RegistrationException("Логин и пароль должны быть длиннее 4 символов");
         }
-
+        DatabaseConnector databaseConnector = new DatabaseConnector();
+        if(!databaseConnector.isUserDoesNotExists(login)){
+            throw new RegistrationException("Пользователь с данным логином уже существует");
+        }
         return true;
     }
 }

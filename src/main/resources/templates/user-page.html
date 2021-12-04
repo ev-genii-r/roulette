@@ -1,12 +1,73 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Getting Started: Serving Web Content</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Account</title>
+	<link rel="stylesheet" th:href="@{/css/user-page.css}">
 </head>
 <body>
-    <a href="/contacts">Контакты</a>
-    <a href="/game-catalog">Каталог мини-игр</a>
-    <a href="/user-page">Личный кабинет</a>
+	<header>
+		<div class="container">
+			<img src="img/logo.png" alt="" class="logo">
+			<nav>
+				<ul class="menu">
+					<li>
+						<a class="button" href="/user-page"><img src="img/domik.png" alt=""></a>
+					</li>
+					<li>
+						<a class="button" href="/game-catalog"><img src="img/minigames.png" alt=""></a>
+					</li>
+					<li>
+						<form action="/wallet" method="get">
+						<button class="button" type="submit"><img src="img/payment.png" alt=""></button>
+						</form>
+					</li>
+					<li>
+						<a class="button" href="/contacts"><img src="img/contacts.png" alt=""></a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<section>
+		<img src="img/holst.png" alt="" class="holst">
+	</section>
+	<section>
+		<div class="main">
+			<div class="back instruct">
+				<div class="win">
+					<div class="winItem1"><p>Лучший игрок: Дядя Вася<br>Выигрыш составил: 184620$</p></div>
+					<div class="winItem2"><img src="img/kubok.png" alt=""></div>
+					<div class="winItem3"><p>Лучший выигрыш:<br>1 000 000$</p></div>
+				</div>
+				<img src="img/kabinet.png" alt="">
+				<div class="userInfo">
+					<img th:src="${image}" alt="" class="ava">
+					<div class="money">
+						<p th:text="'Имя: ' + ${name}" />
+						<p th:text="'Баланс: ' + ${balance} + '$'"/>
+					</div>
+					<a class="button2" href="/donat"><img src="img/money.png" alt=""></a>
+					<a class="button2" href="/change-info"><img src="img/change.png" alt=""></a>
+					<form action="/wallet" method="get">
+						<button class="button2" type="submit"><img src="img/regWallet.png" alt=""></button>
+					</form>
+				</div>
+				<img src="img/lastGames.png" alt="" class="lastGames">
+				<div class="superLastGames">
+					<p>
+						- Колесо фартуны<span class="wheel">+80$</span><br><br>- Монетка<span class="coin">-1000$</span><br><br>- Рулетка<span class="roulette">+700$</span>
+					</p>
+				</div>
+			</div>
+			<div class="info">
+				<img src="img/kfc.png" alt="" class="kfc">
+			</div>
+			<div class="girl instruct">
+				<img src="img/girl.png" alt="" class="girlImg">
+			</div>
+		</div>
+	</section>
 </body>
 </html>

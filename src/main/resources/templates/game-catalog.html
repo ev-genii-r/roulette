@@ -1,15 +1,98 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Getting Started: Serving Web Content</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Main</title>
+	<link rel="stylesheet" th:href="@{/css/main.css}">
 </head>
 <body>
-    <a href="/contacts">Контакты</a>
-    <a href="/game-catalog">Каталог мини-игр</a>
-    <a href="/user-page">Личный кабинет</a>
-    <p th:text="'Users id = ' + ${id}"/>
-    <p th:text="'Users name = ' + ${name}" />
-    <p th:text="'Users balance = ' + ${balance}"/>
+	<header>
+		<div class="container">
+			<img src="img/logo.png" alt="" class="logo">
+			<nav>
+				<ul class="menu">
+					<li>
+						<a class="button" href="/user-page"><img src="img/domik.png" alt=""></a>
+					</li>
+					<li>
+						<a class="button" href="/game-catalog"><img src="img/minigames.png" alt=""></a>
+					</li>
+					<li>
+						<form action="/game-catalog" method="post">
+							<button class="button" type="submit"><img src="img/payment.png" alt=""></button>
+						</form>
+					</li>
+					<li>
+						<a class="button" href="/contacts"><img src="img/contacts.png" alt=""></a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<section>
+		<img src="img/holst.png" alt="" class="holst">
+	</section>
+	<section>
+		<div class="main">
+			<div class="back instruct">
+				<div class="win">
+					<div class="winItem1"><p>Лучший игрок: Дядя Вася<br>Выигрыш составил: 184620$</p></div>
+					<div class="winItem2"><img src="img/kubok.png" alt=""></div>
+					<div class="winItem3"><p>Лучший выигрыш:<br>1 000 000$</p></div>
+				</div>
+				<img src="img/katalog.png" alt="">
+				<div class="miniGames">
+					<div class="games1">
+						<div class="slots games">
+							<a href="/three-pictures"><img src="img/slots.png" alt="">
+							<p>Три слота</p></a>
+						</div>
+						<div class="graph games">
+							<a href="/chance"><img src="img/graph.png" alt="">
+							<p>Шанс</p></a>
+						</div>
+						<div class="roulette games">
+							<a href="/game-catalog"><img src="img/roulette.png" alt="">
+							<p>Рулетка</p></a>	
+						</div>
+					</div>
+					<div class="games2">
+						<div class="coin games">
+							<a href="/coin"><img src="img/coin.png" alt="">
+							<p>Монетка</p></a>
+						</div>
+						<div class="blackJack games">
+							<a href="/game-catalog"><img src="img/blackJack.png" alt="">
+							<p>Black Jack</p></a>
+						</div>
+						<div class="wheel games">
+								<a href="/wheel-spin"><img src="img/wheel.png" alt="">
+								<p>Колесо фортуны</p></a>
+						</div>
+					</div>
+					<div class="mines games">
+						<a href="/game-catalog"><img src="img/mines.png" alt="">
+						<p>Минер</p></a>
+					</div>
+
+				</div>
+			</div>
+			<div class="info instruct">
+				<img src="img/u.png" alt="" class="u">
+				<img th:src="${image}" alt="" class="ava">
+				<div class="userInfo">		
+
+					<p th:text = "'Логин: ' + ${name}"/>
+					<p th:text = "'Счёт: ' + ${balance} + '$'"/>
+					<p>Статус: новичок</p>
+
+				</div>
+			</div>
+			<div class="girl instruct">
+				<img src="img/girl.png" alt="" class="girlImg">
+			</div>
+		</div>
+	</section>
 </body>
 </html>

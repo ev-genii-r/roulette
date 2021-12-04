@@ -1,11 +1,63 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Getting Started: Serving Web Content</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Login</title>
+	<link rel="stylesheet" th:href="@{/css/home-page.css}">
 </head>
 <body>
-    <a href="/registration">Регистрация</a>
-    <a href="/sign-in">Я уже смешарик</a>
+	<header>
+		<div class="container">
+			<img src="img/logo.png" alt="" class="logo">
+			<nav>
+				<ul class="menu">
+					<li>
+						<a class="button" href="/"><img src="img/domik.png" alt=""></a>
+					</li>
+					<li>
+						<a class="button" href="/"><img src="img/minigames.png" alt=""></a>
+					</li>
+					<li>
+						<a class="button" href="/"><img src="img/payment.png" alt=""></a>
+					</li>
+					<li>
+						<a class="button" href="/"><img src="img/contacts.png" alt=""></a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<section>
+		<img src="img/holst.png" alt="" class="holst">
+	</section>
+	<section>
+		<div class="main">
+			<div class="back instruct">
+				<div class="win">
+					<div class="winItem1"><p>Лучший игрок: Дядя Вася<br>Выигрыш составил: 184620$</p></div>
+					<div class="winItem2"><img src="img/kubok.png" alt=""></div>
+					<div class="winItem3"><p>Лучший выигрыш:<br>1 000 000$</p></div>
+				</div>
+				<img src="img/loginpng.png" alt="">
+				<div class="regOrSmesharik">
+					<a class="accept" href="/registration">Регистрация</a>
+					<a class="accept" href="/sign-in">Я уже смешарик</a>
+				</div>
+			</div>
+			<div class="info instruct">
+				<img src="img/u.png" alt="" class="u">
+				<img src="img/ava.png" alt="" class="ava">
+				<div class="userInfo">		
+					<p>
+						Логин:<br>Счет:<br>Статус:
+					</p>
+				</div>
+			</div>
+			<div class="girl instruct">
+				<img src="img/girl.png" alt="" class="girlImg">
+			</div>
+		</div>
+	</section>
 </body>
 </html>

@@ -1,17 +1,86 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Getting Started: Serving Web Content</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Registration</title>
+	<link rel="stylesheet" th:href="@{/css/registration.css}">
 </head>
 <body>
-    <form action="/registration" method="post">
-        <p th:text="${error}"> Введите логин и пароль (не менее 4-ёх символов)</p>
-        <input type="text" name = "login" placeholder="логин"><br>
-        <input type="password" name = "password" placeholder="пароль"><br>
-        <input type="password" name = "confirmPassword" placeholder="подтвердите пароль"><br>
-        <button type="submit"> Подтвердить </button>
-    </form>
+	<header>
+		<div class="container">
+			<img src="img/logo.png" alt="" class="logo">
+			<nav>
+				<ul class="menu">
+					<li>
+						<a class="button" href="/"><img src="img/domik.png" alt=""></a>
+					</li>
+					<li>
+						<a class="button" href="/"><img src="img/minigames.png" alt=""></a>
+					</li>
+					<li>
+						<form action="/" method="post">
+							<button type="submit" class="button" href="#"><img src="img/payment.png" alt=""></button>
+						</form>
+					</li>
+					<li>
+						<a class="button" href="/"><img src="img/contacts.png" alt=""></a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<section>
+		<img src="img/holst.png" alt="" class="holst">
+	</section>
+	<section>
+		<div class="main">
+			<div class="back instruct">
+				<div class="win">
+					<div class="winItem1"><p>Лучший игрок: Дядя Вася<br>Выигрыш составил: 184620$</p></div>
+					<div class="winItem2"><img src="img/kubok.png" alt=""></div>
+					<div class="winItem3"><p>Лучший выигрыш:<br>1 000 000$</p></div>
+				</div>
+				<img src="img/registration.png" alt="">
+				<div class="reg">
+					<form action="/registration" method="post">
+					<p>
+						Логин:
+					</p>
+					<input type="text" class="userLogin regInfo" name = "login" placeholder="логин"><br>
+					<p>
+						Пароль:
+					</p>
+    				<input type="password" class="userPassword regInfo" name="password" placeholder="пароль"><br>
+    				<p>
+						Повторите пароль:
+					</p>
+    				<input type="password" class="regPassword regInfo" name="confirmPassword" placeholder="повторите пароль"><br>
+    				<p>
+						url картинки:
+					</p>
+    				<input type="text" class="regAva regInfo" name="image" placeholder="url картинки"><br>
 
+    					<button type="submit" class="accept" href="#">Подтвердить</button>
+					</form>
+				</div>
+				<div class="userExists">
+					<p th:text="${error}"> Введите логин и пароль (не менее 4-ёх символов)</p>
+				</div>
+			</div>
+			<div class="info instruct">
+				<img src="img/u.png" alt="" class="u">
+				<img src="img/ava.png" alt="" class="ava">
+				<div class="userInfo">		
+					<p>
+						Логин:<br>Счет:<br>Статус:
+					</p>
+				</div>
+			</div>
+			<div class="girl instruct">
+				<img src="img/girl.png" alt="" class="girlImg">
+			</div>
+		</div>
+	</section>
 </body>
 </html>

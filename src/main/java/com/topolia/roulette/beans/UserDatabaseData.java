@@ -9,19 +9,23 @@ import java.util.Objects;
  */
 
 public class UserDatabaseData {
+
     private int id;
+
     private String login;
+
     private String password;
+
     private String image;
 
     public UserDatabaseData(){
 
     }
 
-    public UserDatabaseData(int id, String login, String password, String image){
+    public UserDatabaseData(String login, String password, String image){
         this.password = password;
         this.login =  login;
-        this.id = id;
+        //this.id = id;
         this.image = image;
     }
 

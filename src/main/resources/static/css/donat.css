@@ -1,0 +1,173 @@
+body {
+	font-family: Arial, sans-serif;
+	padding: 0;
+	margin: 0;
+	background: url(../img/background.jpg) no-repeat center top / cover;
+	height: 2000px;
+	width: 1520px;
+}
+
+div {
+	box-sizing: border-box;
+}
+
+p {
+	color: white;
+	font-weight: bold;
+}
+
+.container {
+	width: 1520px;
+	margin: 0 auto;
+}
+
+.logo {
+	margin-top: 5px;
+	float: left;
+}
+
+nav {
+	float: right;
+}
+
+.menu {
+	padding: 0;
+	margin: 0;
+	display: block;
+}
+
+.menu li {
+	float: left;
+	display: block;
+	
+}
+
+.button {
+	margin-right: 16px;
+	background-color: #003300;
+	border-radius: 12px;
+	display: block;
+	width: 240px;
+	height: 60px;
+	text-decoration: none;
+	margin-top: 25px;
+	padding-left: 40px;
+	padding-top: 5px;
+	box-sizing: border-box;
+}
+
+.holst {
+	margin-top: 15px;
+}
+
+.main {
+	width: 1400px;
+	height: 880px;
+	margin: 12px 0 0 80px;
+}
+
+.back {
+	height: 880px;
+	width: 900px;
+}
+
+.win {
+	padding: 0 0 0 50px;
+}
+
+.winItem1 {
+	width: 400px;
+	float: left;
+	font-size: 25px;
+}
+
+.winItem2 {
+	width: 100px;
+	float: left;
+	padding-top: 10px;	
+}
+
+.winItem3 {
+	width: 300px;
+	float: left;
+	font-size: 30px;
+	margin-left: 30px;
+	text-align: center;
+}
+
+.info{
+	height: 395px;
+	width: 340px;
+	margin-left: 20px;
+	float: left;
+}
+
+.girl {
+	height: 470px;
+	width: 340px;
+	margin: 15px 0 0 20px;
+}
+
+.instruct {
+	background: #003300;
+	border-radius:55px;
+	float: left;
+}
+
+.girlImg {
+	margin: 16px 0 0 15px;
+}
+ 	
+.ava {
+	margin: 10px 0 0 30px;
+}
+
+.u {
+	margin: 20px 0 0 140px;
+}
+
+.userInfo {
+	margin-left: 30px;
+}
+
+.userInfo p {
+	font-size: 25px;
+	margin: 5px;
+	text-decoration: none;
+}
+
+.donat {
+	margin: 30px 0 0 150px;
+}
+
+.donat p {
+	font-size: 27px;
+	margin: 0;
+}
+
+.userDonat {
+	margin-top: 20px;
+}
+
+.donatInfo {
+	height: 65px;
+	width: 550px;
+	border-radius:15px;
+	margin-bottom: 15px;
+}
+
+.accept {
+	border-radius: 15px;
+	display: block;
+	height: 65px;
+	width: 550px;
+	text-decoration: none;
+	box-sizing: border-box;
+	background-color: #326532;
+	color: white;
+	text-align: center;
+	font-size: 25px;
+	font-weight: bold;
+	padding-top: 15px;
+	margin-top: 25px;
+}

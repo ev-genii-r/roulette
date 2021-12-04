@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>3slots</title>
+	<link rel="stylesheet" th:href="@{/css/three-pictures.css}">
+</head>
+<body>
+	<header>
+		<div class="container">
+			<img src="img/logo.png" alt="" class="logo">
+			<nav>
+				<ul class="menu">
+					<li>
+						<a class="button" href="/user-page"><img src="img/domik.png" alt=""></a>
+					</li>
+					<li>
+						<a class="button" href="/game-catalog"><img src="img/minigames.png" alt=""></a>
+					</li>
+					<li>
+						<a class="button" href="/wallet"><img src="img/payment.png" alt=""></a>
+					</li>
+					<li>
+						<a class="button" href="/contacts"><img src="img/contacts.png" alt=""></a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<section>
+		<img src="img/holst.png" alt="" class="holst">
+	</section>
+	<section>
+		<div class="main">
+			<div class="back instruct">
+				<div class="win">
+					<div class="winItem1"><p>Лучший игрок: Дядя Вася<br>Выигрыш составил: 184620$</p></div>
+					<div class="winItem2"><img src="img/kubok.png" alt=""></div>
+					<div class="winItem3"><p>Лучший выигрыш:<br>1 000 000$</p></div>
+				</div>
+				<img src="img/slot.png" alt="">
+				<div class="game">
+					<img th:src="${img1}" width="200" height="200">
+				    <img th:src="${img2}" width="200" height="200">
+				    <img th:src="${img3}" width="200" height="200"><br>
+				    <img th:src="${img4}" width="200" height="200">
+				    <img th:src="${img5}" width="200" height="200">
+				    <img th:src="${img6}" width="200" height="200"><br>
+				    <img th:src="${img7}" width="200" height="200">
+				    <img th:src="${img8}" width="200" height="200">
+				    <img th:src="${img9}" width="200" height="200"><br>
+				    <form action="/three-pictures" method="post">
+				        <input name = "bet" placeholder="ставка"><br>
+				        <input name = "select1" placeholder="введите номер поля">
+				        <input name = "select2" placeholder="введите номер поля">
+				        <input name = "select3" placeholder="введите номер поля">
+				        <button type="submit">подтвердить</button>
+				    </form>
+    <form action="/three-pictures" method="get">
+        <button type="submit">еще разок</button>
+    </form>
+			    </div>
+		</div>
+			<div class="info instruct">
+				<img src="img/u.png" alt="" class="u">
+				<img src="img/ava.png" alt="" class="ava">
+				<div class="userInfo">		
+					<p>
+						Логин: Pavel_228<br>Счет: 754<br>Статус: Новичек
+					</p>
+				</div>
+			</div>
+			<div class="girl instruct">
+				<img src="img/girl.png" alt="" class="girlImg">
+			</div>
+		</div>
+	</section>
+</body>
+</html>
